@@ -7,6 +7,7 @@ import com.wanxin.common.domain.RestResponse;
 import com.wanxin.common.util.OkHttpUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author yuelimin
@@ -21,6 +22,7 @@ public class SmsService {
     @Value("${sms.enable}")
     private Boolean smsEnable;
 
+    RestTemplate restTemplate = new RestTemplate();
     /**
      * 获取手机验证码
      *
@@ -29,6 +31,7 @@ public class SmsService {
      */
     public RestResponse getSMSCode(String mobile) {
         if (smsEnable) {
+//            restTemplate.postForObject(smsURL + "/generate?effectiveTime=300&name=sms","{\"mobile\":" + mobile + "}",String.class);
             return OkHttpUtil.post(smsURL + "/generate?effectiveTime=300&name=sms", "{\"mobile\":" + mobile + "}");
 
         }

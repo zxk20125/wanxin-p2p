@@ -30,7 +30,7 @@ docker pull styletang/rocketmq-console-ng
 
 docker run -d --name rmqconsole \
 -p 8080:8080 \
--e "JAVA_OPTS=-Drocketmq.namesrv.addr=192.168.158.164:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false" \
+-e "JAVA_OPTS=-Drocketmq.namesrv.addr=114.132.248.87:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false" \
 styletang/rocketmq-console-ng
 
 systemctl stop firewalld.service

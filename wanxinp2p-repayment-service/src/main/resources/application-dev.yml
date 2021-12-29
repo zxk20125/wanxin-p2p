@@ -2,7 +2,7 @@
 app:
   id: repayment-service
 apollo:
-  meta: http://192.168.158.162:8080
+  meta: http://114.132.248.87:8080
   bootstrap:
     enabled: true
     eagerLoad:

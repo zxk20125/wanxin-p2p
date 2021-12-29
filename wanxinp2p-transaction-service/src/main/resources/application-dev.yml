@@ -5,13 +5,13 @@ spring:
       db0:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://192.168.158.164:3306/p2p_transaction_0?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://114.132.248.87:3306/p2p_transaction_0?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
         username: root
         password: yueliminvc@outlook.com
       db1:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://192.168.158.164:3306/p2p_transaction_1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://114.132.248.87:3306/p2p_transaction_1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
         username: root
         password: yueliminvc@outlook.com
     sharding:
@@ -41,7 +41,7 @@ spring:
 app:
   id: transaction-service
 apollo:
-  meta: http://192.168.158.162:8080
+  meta: http://114.132.248.87:8080
   bootstrap:
     enabled: true
     eagerLoad:

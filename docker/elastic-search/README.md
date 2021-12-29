@@ -137,7 +137,7 @@ POST wanxinp2p_project/_mapping
 # 0.0.0.0：允许任何IP访问
 http.host: "0.0.0.0"
 # 配置elasticsearch集群地址
-xpack.monitoring.elasticsearch.hosts: ["http://192.168.158.164:9200"]
+xpack.monitoring.elasticsearch.hosts: ["http://114.132.248.87:9200"]
 # 允许监控
 xpack.monitoring.enabled: true
 # 启动时读取配置文件指定
@@ -164,7 +164,7 @@ docker exec -it logstash /bin/bash
 ```shell script
 input {
   jdbc {
-    jdbc_connection_string => "jdbc:mysql://192.168.158.164:3306/p2p_transaction_0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC"
+    jdbc_connection_string => "jdbc:mysql://114.132.248.87:3306/p2p_transaction_0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC"
     jdbc_user => "root"
     jdbc_password => "yueliminvc@outlook.com"
     jdbc_driver_library => "./mysql.jar"
@@ -184,7 +184,7 @@ input {
   }
 
   jdbc {
-    jdbc_connection_string => "jdbc:mysql://192.168.158.164:3306/p2p_transaction_1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC"
+    jdbc_connection_string => "jdbc:mysql://114.132.248.87:3306/p2p_transaction_1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC"
     jdbc_user => "root"
     jdbc_password => "yueliminvc@outlook.com"
     jdbc_driver_library => "./mysql.jar"
@@ -203,7 +203,7 @@ input {
 output {
   elasticsearch {
     # ES服务器地址
-    hosts => "192.168.158.164:9200"
+    hosts => "114.132.248.87:9200"
     # ES索引库名字
     index => "wanxinp2p_project"
     # 取表中主键值作为文档ID

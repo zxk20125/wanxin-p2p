@@ -1,7 +1,7 @@
 # 0.0.0.0：允许任何IP访问
 http.host: "0.0.0.0"
 # 配置elasticsearch集群地址
-xpack.monitoring.elasticsearch.hosts: ["http://192.168.158.164:9200"]
+xpack.monitoring.elasticsearch.hosts: ["http://114.132.248.87:9200"]
 # 允许监控
 xpack.monitoring.enabled: true
 # 启动时读取配置文件指定
